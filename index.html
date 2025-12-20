@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <script src="leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="leaflet/leaflet.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <button id="btnSave">Speichern</button>
+        <button id="btnShow">Anzeigen</button>
+        <!-- <button id="btnExtra">Extra</button> -->
+
+        <select id="btnSprache"  aria-placeholder="Wähle Sprache">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="fa">Persisch</option>
+            <option value="ja"> Japanisch</option>
+            <option value="ru"> Russisch</option>
+            
+        </select>
+        <div class="time" id="uhr"></div>
+    </nav>
+    
+    <div class="container">
+
+        <div class="content">
+
+
+            <div class="card">
+                <div class="search">
+        <input  id="cityName" type="text" placeholder="Geben Sie den Namen der Stadt ein" spellcheck="false">
+        <button id="searchbtn"><img src="img/search.png"></button>
+        
+                </div>
+                <div class="error">
+                <p>Stadtname nicht erkannt.</p>
+               </div>
+        
+        
+        <div id="weather-bottom" class="weather">
+            <button><img src="img/rain.png" class="weather-icon"></button>
+            <h1 class="temp">17°c</h1>
+            <h2 class="city">Teheran</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="img/humidity.png">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Feuchtigkeit</p>
+            </div>
+        </div>
+        
+        <div class="col">
+            <img src="img/wind.png">
+        <div>
+            <p class="wind">15 Km/h</p>
+            <p>Windgeschwindigkeit</p>
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+   
+    </div>
+
+        <div  id="map"  class="content"> </div> 
+    </div>
+     <div id = "extraArea" class = "area-passiv"></div>
+
+</body>
+</html>
